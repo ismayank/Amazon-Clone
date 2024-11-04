@@ -47,8 +47,6 @@
 
 A full-stack e-commerce website inspired by the Amazon website.
 
-<img width="1493" alt="amazon-clone" src="https://user-images.githubusercontent.com/102174805/187029436-ee2149f4-43db-4145-b67d-a16bb4317357.png">
-
 **Core Functionalities:**
 * Creating/Signing in to an account.
 * Single Page Application (instant response time).
