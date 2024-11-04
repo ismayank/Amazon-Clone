@@ -1,7 +1,7 @@
 const socials = {
-  github: 'https://github.com/okoyecharles',
-  portfolio: 'https://okoyecharles.com',
-  gmail: 'mailto:okoyecharles509@gmail.com'
+  github: 'https://github.com/ismayank',
+  portfolio: 'https://dinocorp-ismayanks-projects.vercel.app',
+  gmail: 'mailto:mayanksinghchakulia@gmail.com'
 };
 
 export default socials;

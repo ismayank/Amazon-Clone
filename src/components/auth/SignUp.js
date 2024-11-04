@@ -83,7 +83,7 @@ function SignUp() {
           </form>
 
           <p>
-            By continuing, you agree to Charles' Amazon Clone Conditions of Use
+            By continuing, you agree to Mayank's Amazon Clone Conditions of Use
             and Privacy Notice.
           </p>
         </div>

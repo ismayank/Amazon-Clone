@@ -15,6 +15,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import { useDispatch, useSelector } from "react-redux";
 import { clearOrders, clearProfile, setProfile, updateOrders } from "../redux/features/user/userSlice";
 import getStorageKey from "../data/storageKey";
+import ProductDetail from "./home/ProductDetail";
 
 const promise = loadStripe(
   "pk_test_51LKikxJIr5sMtV8TVVCP3FSBVbFYb87a2Al30jAkasBgTDe61U02aRDd5ZJKT68wknB9Woa8ZNReOfSBs1Q3Ip6g00TdXWcbbN"
@@ -66,6 +67,15 @@ function App() {
               <>
                 <Header />
                 <Orders />
+              </>
+            }
+          />
+          <Route
+            path="/product/:id"
+            element={
+              <>
+                <Header />
+                <ProductDetail />
               </>
             }
           />

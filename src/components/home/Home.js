@@ -26,7 +26,7 @@ function Home() {
     <div className="home">
       <div className="home__container">
         <img
-          src={"/assets/background/home.webp"}
+          src={"/assets/background/b1.jpg"}
           alt="home-background"
           className="home__image mobile-hidden"
           width="2000"

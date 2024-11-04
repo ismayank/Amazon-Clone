@@ -10,6 +10,23 @@
 
   z-index: 1;
 }
+/* Product.css */
+.product__link {
+  text-decoration: none;  /* Remove underline */
+  color: inherit;         /* Inherit color, usually black */
+}
+
+.product__title {
+  color: #000;            /* Set text color to black */
+  font-weight: bold;
+}
+
+.product__price {
+  color: #333;
+}
+
+/* Any other necessary styling */
+
 
 .product__img-container {
   width: 100%;

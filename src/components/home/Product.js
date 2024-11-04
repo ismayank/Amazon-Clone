@@ -1,25 +1,27 @@
+// Product.js
 import React from "react";
-import "../../styles/Product.css";
-import * as utils from "../../logic/utils";
-import Star from "./Star";
 import { useDispatch } from "react-redux";
 import { addItem } from "../../redux/features/cart/cartSlice";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
+import "../../styles/Product.css";
+import Star from "./Star";
+import * as utils from "../../logic/utils";
 
 function Product({ id, image, title, price, rating }) {
-  const dispatch = useDispatch(); 
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const handleAddClick = () => {
-    dispatch(addItem({
-      id,
-      title,
-      image,
-      price,
-      rating,
-    }));
+  const handleAddClick = (e) => {
+    e.stopPropagation(); // Prevent navigation on button click
+    dispatch(addItem({ id, title, image, price, rating }));
+  };
+
+  const handleProductClick = () => {
+    navigate(`/product/${id}`); // Navigate to product detail page
   };
 
   return (
-    <div className="product">
+    <div className="product" onClick={handleProductClick}>
       <div className="product__img-container">
         <img className="product__img" src={image} alt={title} width={256} height={256} />
       </div>
@@ -33,7 +35,6 @@ function Product({ id, image, title, price, rating }) {
         <p className="product__price">
           <span>$</span>
           <span>{utils.getPrice(price)}</span>
-          <span>{utils.getPrice(price, "decimal")}</span>
         </p>
       </div>
       <button type="button" onClick={handleAddClick} aria-label={`${title} - Add to cart`}>
